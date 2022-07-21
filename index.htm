@@ -20,15 +20,25 @@
   <body>
     <div id="knockout-app">
       <h1>Todo App <span class="small">with KnockoutJS</span></h1>
-      <form>
+      <form data-bind="submit: handleSubmit">
         <div class="field">
           <label for="task">Enter task: </label>
-          <input id="task" type="text" />
+          <input data-bind="value: task" id="task" type="text" />
           <label for="urgency">Urgency: </label>
-          <input id="urgency" type="text" />
+          <select id="urgency" data-bind="value: urgency">
+            <option value="dolater">Do Later</option>
+            <option value="optional">Optional</option>
+            <option value="urgent">Urgent</option>
+          </select>
           <input type="submit" value="Add task" />
         </div>
       </form>
+      <ul data-bind="foreach:  tasks">
+        <li>
+          <span data-bind="text: $data"></span>
+          <button class="removeBtn">&times;</button>
+        </li>
+      </ul>
     </div>  
   </body>
 </html>
