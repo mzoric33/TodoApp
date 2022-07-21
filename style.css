@@ -50,7 +50,7 @@ form {
 }
 ul {
   padding-top: 2%;
-  padding-left: 20%;
+  padding-left: 10%;
 }
 
 li {
@@ -67,4 +67,18 @@ li {
   position: absolute;
   right: 10%;
   top: 20%;
+}
+
+.green {
+  background-color: rgb(100, 243, 100);
+}
+.orange {
+  background-color: rgb(255, 185, 54);
+}
+.red {
+  background-color: rgb(255, 65, 65);
+}
+
+.list {
+  margin: 5px;
 }
