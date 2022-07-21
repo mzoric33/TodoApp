@@ -7,9 +7,28 @@
     <meta name="author" content="Marin Zorić">
     <title>TodoApp</title>
     <script defer src="script.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"
+    integrity="sha512-2AL/VEauKkZqQU9BHgnv48OhXcJPx9vdzxN1JrKDVc4FPU/MEE/BZ6d9l0mP7VmvLsjtYwqiYQpDskK9dG8KBA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.4/knockout.validation.min.js">
+    </script>
     <link href="style.css" rel="stylesheet"></link>
   </head>
   <body>
-    <h1>Todo App</h1>
+    <div id="knockout-app">
+      <h1>Todo App <span class="small">with KnockoutJS</span></h1>
+      <form>
+        <div class="field">
+          <label for="task">Enter task: </label>
+          <input id="task" type="text" />
+          <label for="urgency">Urgency: </label>
+          <input id="urgency" type="text" />
+          <input type="submit" value="Add task" />
+        </div>
+      </form>
+    </div>  
   </body>
 </html>
