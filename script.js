@@ -3,11 +3,13 @@
 function todoAppViewModel() {
   const that = this;
 
+  const list = document.querySelector(".list");
+
   //that.hasBeenSubmitted = ko.observable(false);
 
   that.tasks = ko.observableArray([]);
 
-  that.task = ko.observable("").extend({
+  that.task = ko.observable("...").extend({
     required: true,
   });
 
@@ -19,7 +21,24 @@ function todoAppViewModel() {
       errors.showAllMessages();
       return;
     }
+
+    if (that.urgency() === "dolater") {
+      list.classList.add("green");
+    }
+    if (that.urgency() === "optional") {
+      list.classList.add("orange");
+    }
+    if (that.urgency() === "urgent") {
+      list.classList.add("red");
+    }
+
     that.tasks.push(that.task());
+    that.task("...");
+  };
+
+  that.removeTask = function (_, event) {
+    const indexToRemove = event.target.getAttribute("task-index");
+    that.tasks.splice(indexToRemove, 1);
   };
 }
 
