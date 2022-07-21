@@ -34,6 +34,7 @@ function todoAppViewModel() {
 
     that.tasks.push(that.task());
     that.task("...");
+    that.urgency("dolater");
   };
 
   that.removeTask = function (_, event) {
