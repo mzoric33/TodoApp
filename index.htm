@@ -35,7 +35,7 @@
       </form>
       <ul data-bind="foreach:  tasks">
         <li class="list">
-          <span data-bind="text: $data"></span>
+          <span class="tekst" data-bind="text: $data"></span>
           <button data-bind="click: $parent.removeTask, attr: { 'task-index' : $index }" class="removeBtn">&times;</button>
         </li>
       </ul>

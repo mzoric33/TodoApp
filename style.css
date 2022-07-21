@@ -51,15 +51,17 @@ form {
 ul {
   padding-top: 2%;
   padding-left: 10%;
+  padding-bottom: 5%;
 }
 
 li {
   text-align: left;
   position: relative;
+  border: 1px solid black;
 }
 
 .field {
-  padding: 0.7em;
+  padding: 0.5em;
 }
 
 .removeBtn {
@@ -81,4 +83,9 @@ li {
 
 .list {
   margin: 5px;
+}
+
+.tekst {
+  padding-left: 5%;
+  font-size: 0.7em;
 }
